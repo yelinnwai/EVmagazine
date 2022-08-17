@@ -10,6 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /*Mobile-------------------------------------*/
 @media only screen and (max-width: 570px) {
   body {
@@ -59,7 +60,7 @@ html {
 }
 
 /*Desktop-------------------------------------*/
-@media only screen and (min-width: 1011px) {
+@media only screen and (min-width: 768px) {
   body {
     background: white;
     height: 100%;
@@ -111,10 +112,10 @@ header {
   background: #fff;
 }
 
-/* Nav */
+/* Navigation */
 
-/*Desktop-------------------------------------*/
-@media only screen and (min-width: 1011px) {
+/*Desktop Nav-------------------------------------*/
+@media only screen and (min-width: 768px) {
   .navbar {
     display: flex;
     align-items: center;
@@ -156,52 +157,59 @@ header {
     transition: 0.3s ease;
   }
 
-  .hamburger {
+  .navbar-toggle {
     display: none;
   }
-
 }
 
-/*Mobile-------------------------------------*/
+/*Mobile Nav-------------------------------------*/
 @media only screen and (max-width: 570px){
-
   .navbar {
-    display: block;
-    min-height: 70px;
+  font-size: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: 0.6s ease;
   }
 
   .nav-menu {
+    list-style-type: none;
     display: none;
-    width: 100%;
+}
+
+  li {
+    text-align: center;
+    margin: 15px auto;
   }
 
-  .nav-menu.show {
-    display: flex;
+  a {
+    text-decoration: none;
+    color: #003459;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.5s ease;
   }
 
-  .hamburger {
-    margin-left: 400px;
-    margin-top: -55px;
+  .navbar-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 24px;
+  }
+
+  .activate {
     display: block;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    appearance: none;
-    outline: none;
-    background: none;
-    border: none;
   }
 
-  .hamburger .bar, .hamburger::after, .hamburger::before {
-    content: "";
+  .nav-item a:hover,
+  .nav-item a.active {
+    color: #1091fb;
+  }
+
+  .nav-item a.active::after {
     display: block;
-    width: 100%;
-    height: 5px;
-    background: #1091fb;
-    margin: 6px 0px;
-    transition: 0.3s;
+    height: 2px;
+    transition: 0.5s ease;
   }
-
 
 
 }
@@ -213,8 +221,8 @@ header {
   color: whitesmoke;
 }
 
-/*Desktop-------------------------------------*/
-@media only screen and (min-width: 1011px) {
+/*Desktop Trending-------------------------------------*/
+@media only screen and (min-width: 768px) {
 
   .container {
     display: grid;
@@ -297,12 +305,12 @@ header {
   }
 }
 
-/*Mobile-------------------------------------*/
+/*Mobile Trending-------------------------------------*/
 @media only screen and (max-width: 570px){
   .container {
     display: grid;
     width: 100%;
-    height: 900px;
+    height: 800px;
     grid-gap: 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: 300px;
@@ -320,6 +328,7 @@ header {
     color: #fff;
     border-radius: 5px;
     font-size: 12px;
+    margin-top: 20px;
   }
 
   .a {
@@ -328,9 +337,11 @@ header {
   }
   .b {
     grid-area: b;
+    max-height: 100px;
   }
   .c {
     grid-area: c;
+    max-height: 100px;
   }
   .d {
     grid-area: d;
@@ -341,19 +352,19 @@ header {
     height: 250px;
     object-fit: cover;
     border-radius: 5px;
-    margin-left: 25px;
+    margin-left: 20px;
   }
 
   .trending-news-date {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.6);
-    margin-left: 25px;
+    margin-left: 20px;
   }
 
   .trending-news-main-title {
-    font-size: 15px;
+    font-size: 18px;
     color: #ffffff;
-    margin-left: 25px;
+    margin-left: 20px;
   }
 
   .trending-news-title {
@@ -363,9 +374,7 @@ header {
   }
 
   .trending-news-preview {
-    color: #ffffffd2;
-    font-size: 12px;
-    margin-left: 25px;
+   display: none;
   }
 
   .trending-side-img {
@@ -383,12 +392,12 @@ header {
 /* Highlight News */
 
 
-/*Desktop-------------------------------------*/
-@media only screen and (min-width: 1011px) {
+/*Desktop Highlight New-------------------------------------*/
+@media only screen and (min-width: 768px) {
   .highlight-news {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px 400px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 450px);
     grid-template-areas:
                       "one two three"
                       "four five six";
@@ -402,7 +411,8 @@ header {
     border-radius: 5px;
     font-size: 150%;
     margin-top: 50px;
-    margin-left: 20px;
+    margin-left: 40px;
+
   }
 
   .one {
@@ -424,77 +434,7 @@ header {
     grid-area: six;
   }
 
-  .hightlight-news-img {
-    width: 370px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  .highlight-news-date {
-    font-size: 14px;
-    color: rgba(2, 10, 236, 0.6);
-    margin-bottom: 8px;
-  }
-
-  .highlight-news-title {
-    font-size: 20px;
-    color: #003459;
-    margin-bottom: 10px;
-  }
-
-  .highlight-news-preview {
-    color: #003459;
-    font-size: 15px;
-  }
-}
-
-/*Mobile-------------------------------------*/
-@media only screen and (max-width: 570px){
-  .highlight-news {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 450px 400px;
-    grid-template-areas:
-                      "one"
-                      "two"
-                      "three"
-                      "four"
-                      "five"
-                      "six";
-    background-color: rgb(243, 240, 240);
-    color: #444;
-    width: 100%;
-  }
-
-  .news {
-    border-radius: 5px;
-    font-size: 150%;
-    margin-top: 50px;
-    margin-left: 20px;
-  }
-
-  .one {
-    grid-area: one;
-  }
-  .two {
-    grid-area: two;
-  }
-  .three {
-    grid-area: three;
-  }
-  .four {
-    grid-area: four;
-  }
-  .five {
-    grid-area: five;
-  }
-  .six {
-    grid-area: six;
-  }
-
-  .hightlight-news-img {
+  .highlight-news-img {
     width: 400px;
     height: 250px;
     object-fit: cover;
@@ -520,12 +460,85 @@ header {
   }
 }
 
+/*Mobile Highlight New-------------------------------------*/
+@media only screen and (max-width: 570px){
+  .highlight-news {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 450px 400px;
+    grid-template-areas:
+                      "one"
+                      "two"
+                      "three"
+                      "four"
+                      "five"
+                      "six";
+    background-color: rgb(243, 240, 240);
+    color: #444;
+    width: 100%;
+  }
+
+  .news {
+    border-radius: 5px;
+  }
+
+  .one {
+    grid-area: one;
+    margin-top: 50px;
+  }
+  .two {
+    grid-area: two;
+  }
+  .three {
+    grid-area: three;
+  }
+  .four {
+    grid-area: four;
+    margin-top: 50px;
+  }
+  .five {
+    grid-area: five;
+    margin-top: 50px;
+  }
+  .six {
+    grid-area: six;
+    margin-top: 50px;
+  }
+
+  .highlight-news-img {
+    width: 370px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+  }
+
+  .highlight-news-date {
+    font-size: 14px;
+    color: rgba(2, 10, 236, 0.6);
+    margin-left: 20px;
+  }
+
+  .highlight-news-title {
+    font-size: 20px;
+    color: #003459;
+    margin-left: 20px;
+  }
+
+  .highlight-news-preview {
+    color: #003459;
+    font-size: 15px;
+    margin-left: 20px;
+  }
+}
+
 
 /* Highlight Video */
 
 
-/*Desktop-------------------------------------*/
-@media only screen and (min-width: 1011px) {
+/*Desktop Highlight Video-------------------------------------*/
+@media only screen and (min-width: 768px) {
 
 .highlight-videos {
   display: flex;
@@ -541,7 +554,7 @@ iframe {
 }
 }
 
-/*Mobile-------------------------------------*/
+/*Mobile Highlight Video-------------------------------------*/
 @media only screen and (max-width: 570px){
   .highlight-videos {
     display: flex;
@@ -549,10 +562,14 @@ iframe {
     justify-content: space-between;
     background-color: #444;
     color: #fff;
-    height: 700px;
+    height: 900px;
     align-items: center;
   }
 
+  .clipone, .cliptwo, .clipthree, .clipfour {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
 
 }
 
@@ -562,8 +579,8 @@ iframe {
 /* Footer */
 
 
-/*Desktop-------------------------------------*/
-@media only screen and (min-width: 1011px) {
+/*Desktop Footer-------------------------------------*/
+@media only screen and (min-width: 768px) {
 
 footer {
   background-color: rgb(243, 240, 240);
@@ -581,7 +598,7 @@ footer {
 }
 }
 
-/*Mobile-------------------------------------*/
+/*Mobile Footer-------------------------------------*/
 @media only screen and (max-width: 570px){
   footer {
     background-color: rgb(243, 240, 240);

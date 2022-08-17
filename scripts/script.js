@@ -1,7 +1,7 @@
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
+let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-
-})
+navBarToggle.addEventListener('click', function () {
+  mainNav.classList.toggle('activate');
+  console.log('Clicked');
+});
