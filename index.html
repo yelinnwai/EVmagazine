@@ -1,16 +1,30 @@
+<!--
+  Todo: change alt text to something more meaningful.
+  Todo: code remaining pages. (videos, podcasts, brands, subscribe)
+  Todo: implement responsive images, scrset attribute (format webp)
+  Todo: change logo with svg format
+  Todo: improve footer looks better (ref- https://muffingroup.com/blog/website-footer/)
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- the head contains information about the document that is not visible -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css" />
-    <title>EV Magazine</title>
+    <title>EV Magazine | Your Best Guide to Electric Vehicles</title>
   </head>
+
+<!-- the body section contains all the contents of the document -->
   <body>
+    <!-- header element use for logo and navigation -->
     <header>
-      <nav class="navbar">
+      <!-- Add role & aria-label attributes for accessibility -->
+      <nav class="navbar" role="navigation" aria-label="main menu">
 
         <a href="#"
         ><img
@@ -23,30 +37,34 @@
       <i class="fa fa-bars"></i>
     </span>
         <ul class="nav-menu" id="js-menu">
-          <li class="nav-item"><a class="active" href="index.html">News</a></li>
-          <li class="nav-item"><a href="videos.html">Videos</a></li>
-          <li class="nav-item"><a href="podcasts.html">Podcasts</a></li>
+          <li class="nav-item"><a class="active" href="index.html">Home</a></li>
+          <li class="nav-item"><a href="news.html">News</a></li>
+          <li class="nav-item"><a href="reviews.html">Reviews</a></li>
           <li class="nav-item"><a href="brands.html">Brands</a></li>
           <li class="nav-item"><a href="subscribe.html">Subscribe</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="container">
+    <!--
+      main element use for display trending four contents.
+      article element use for preview article.
+    -->
+    <main class="container">
       <div class="trending a">
         <a href="index.html" class="article-link">
-        <img class="trending-img" src="https://images.unsplash.com/photo-1600661653561-629509216228?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="EV car" loading="lazy">
+        <img class="trending-img" src="https://images.unsplash.com/photo-1600661653561-629509216228?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="describe about photo" loading="lazy">
         <p class="trending-news-date">Oct 25, 2022</p>
         <h2 class="trending-news-main-title">Tesla abandoned over $60 million worth of R&D projects last quarter</h2>
       </a>
-        <p class="trending-news-preview">
-          Tesla confirmed in a new filing this week that it abandoned over $60 million worth of research and development efforts, but the automaker didn’t disclose specific projects.</p>
+        <article class="trending-news-preview">
+          Tesla confirmed in a new filing this week that it abandoned over $60 million worth of research and development efforts, but the automaker didn’t disclose specific projects.</article>
 
       </div>
 
       <div class="trending b">
         <a href="index.html" class="article-link">
-        <img class="trending-side-img" src="https://images.unsplash.com/photo-1542228262-32ba0097054c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Nnw4MjcyNjE4fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="EV car" loading="lazy">
+        <img class="trending-side-img" src="https://images.unsplash.com/photo-1542228262-32ba0097054c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Nnw4MjcyNjE4fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="describe about photo" loading="lazy">
         <h4 class="trending-news-title">Nissan expands Leaf electric car to the biggest Latin American markets</h4>
       </a>
 
@@ -54,7 +72,7 @@
 
       <div class="trending c">
         <a href="index.html" class="article-link">
-        <img class="trending-side-img" src="https://images.unsplash.com/photo-1543321600-d15f1310dff2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OXw4MjcyNjE4fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="EV car" loading="lazy">
+        <img class="trending-side-img" src="https://images.unsplash.com/photo-1543321600-d15f1310dff2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OXw4MjcyNjE4fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="describe about photo" loading="lazy">
         <h4 class="trending-news-title">Billions earmarked for EV charging stations and reducing emissions</h4>
         </a>
 
@@ -62,63 +80,66 @@
 
       <div class="trending d">
         <a href="index.html" class="article-link">
-        <img class="trending-side-img" src="https://images.unsplash.com/photo-1618213216227-abfd16b1b6e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NHw1NjE0OTYyNHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60" alt="EV car" loading="lazy">
+        <img class="trending-side-img" src="https://images.unsplash.com/photo-1618213216227-abfd16b1b6e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NHw1NjE0OTYyNHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60" alt="describe about photo" loading="lazy">
         <h4 class="trending-news-title">Porsche features Mission E electric car in Playmobil movie product placement</h4>
         </a>
 
       </div>
 
-    </div>
+    </main>
 
+    <!-- hightlight news session contains information about the latest news. -->
     <div class="highlight-news">
         <div class="news one">
           <a href="index.html" class="article-link">
-            <img class="highlight-news-img" src="https://images.unsplash.com/photo-1521336637830-92e5a50e21ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MjB8NTYxNDk2MjR8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt="EV car" loading="lazy">
+            <img class="highlight-news-img" src="https://images.unsplash.com/photo-1521336637830-92e5a50e21ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MjB8NTYxNDk2MjR8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt="describe about photo" loading="lazy">
             <p class="highlight-news-date">Sept 15, 2022</p>
             <h4 class="highlight-news-title">India to add 5,000+ electric buses in 65 cities in ongoing massive EV push</h4>
-            <p class="highlight-news-preview">An Indian government committee has sanctioned 5,645 electric buses for 65 cities in one of the largest electric bus initiatives the world has seen outside of China.</p>
+            <article class="highlight-news-preview">An Indian government committee has sanctioned 5,645 electric buses for 65 cities in one of the largest electric bus initiatives the world has seen outside of China.</article>
             </a>
         </div>
         <div class="news two">
           <a href="index.html" class="article-link">
-            <img class="highlight-news-img" src="https://images.unsplash.com/photo-1600661653561-629509216228?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="EV car" loading="lazy">
+            <img class="highlight-news-img" src="https://images.unsplash.com/photo-1600661653561-629509216228?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="describe about photo" loading="lazy">
             <p class="highlight-news-date">Sept 13, 2022</p>
             <h4 class="highlight-news-title">BMW, Ford, Honda, and VW strike deal with California on vehicle emissions</h4>
-            <p class="highlight-news-preview">Four big automakers have cut a deal with California to adopt the state’s vehicle emissions rules in a compromise agreement, bypassing the Trump administration’s plan.</p>
+            <article class="highlight-news-preview">Four big automakers have cut a deal with California to adopt the state’s vehicle emissions rules in a compromise agreement, bypassing the Trump administration’s plan.</article>
             </a>
         </div>
         <div class="news three">
           <a href="index.html" class="article-link">
-            <img class="highlight-news-img" src="https://images.unsplash.com/photo-1582201872911-67877db5fb38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTF8bkhiWEFvTHNZNE18fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt="EV car" loading="lazy">
+            <img class="highlight-news-img" src="https://images.unsplash.com/photo-1582201872911-67877db5fb38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTF8bkhiWEFvTHNZNE18fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt="describe about photo" loading="lazy">
             <p class="highlight-news-date">Aug 1, 2022</p>
             <h4 class="highlight-news-title">Warsaw orders 130 articulated electric buses from Solaris to replace diesel buses</h4>
-            <p class="highlight-news-preview">Warsaw has placed an order for 130 articulated electric buses from Polish bus maker Solaris in one of the largest European orders for e-buses to date.</p>
+            <article class="highlight-news-preview">Warsaw has placed an order for 130 articulated electric buses from Polish bus maker Solaris in one of the largest European orders for e-buses to date.</article>
             </a>
         </div>
         <div class="news four"><a href="index.html" class="article-link">
-          <img class="highlight-news-img" src="https://images.unsplash.com/photo-1623079478735-b899e5066a80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mzd8bkhiWEFvTHNZNE18fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt="EV car" loading="lazy">
+          <img class="highlight-news-img" src="https://images.unsplash.com/photo-1623079478735-b899e5066a80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mzd8bkhiWEFvTHNZNE18fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt="describe about photo" loading="lazy">
           <p class="highlight-news-date">Jul 25, 2022</p>
           <h4 class="highlight-news-title">America’s first fast and affordable 45 mph electric scooter is finally here</h4>
-          <p class="highlight-news-preview">The Wiz electric scooter is a quick and sporty two-seater designed for tooting around cities and suburbs. And starting this week it will be making deliveries across the US.</p>
+          <article class="highlight-news-preview">The Wiz electric scooter is a quick and sporty two-seater designed for tooting around cities and suburbs. And starting this week it will be making deliveries across the US.</article>
           </a>
         </div>
         <div class="news five">
           <a href="index.html" class="article-link">
-            <img class="highlight-news-img" src="https://images.unsplash.com/photo-1614159122583-a913cccdce96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MzN8bkhiWEFvTHNZNE18fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt="EV car" loading="lazy">
+            <img class="highlight-news-img" src="https://images.unsplash.com/photo-1614159122583-a913cccdce96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MzN8bkhiWEFvTHNZNE18fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt="describe about photo" loading="lazy">
             <p class="highlight-news-date">June 7, 2022</p>
             <h4 class="highlight-news-title">CUPRA teases new all-electric concept crossover before Frankfurt debut</h4>
-            <p class="highlight-news-preview">CUPRA has teased its first all-electric vehicle ahead of its official debut at the Frankfurt motor show next month.
+            <article class="highlight-news-preview">CUPRA has teased its first all-electric vehicle ahead of its official debut at the Frankfurt motor show next month.</article>
+            </a>
         </div>
         <div class="news six">
           <a href="index.html" class="article-link">
-            <img class="highlight-news-img" src="https://images.unsplash.com/photo-1581182394120-34b20c0c60ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NjN8bkhiWEFvTHNZNE18fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt="EV car" loading="lazy">
+            <img class="highlight-news-img" src="https://images.unsplash.com/photo-1581182394120-34b20c0c60ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NjN8bkhiWEFvTHNZNE18fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt="describe about photo" loading="lazy">
             <p class="highlight-news-date">June 20, 2022</p>
             <h4 class="highlight-news-title">VW prepares Zwickau factory for 330,000 all-electric cars per year</h4>
-            <p class="highlight-news-preview">VW is converting its entire Zwickau factory to electric vehicle production, and as it prepares for the start of ID3 production later this year.</p>
-            </a>
+            <article class="highlight-news-preview">VW is converting its entire Zwickau factory to electric vehicle production, and as it prepares for the start of ID3 production later this year.</p>
+            </article>
         </div>
     </div>
 
+    <!-- hightlight videos session space to display the embedded videos. -->
     <div class="highlight-videos">
       <div class="video clipone">
           <iframe src="https://www.youtube.com/embed/HfuVOJUgEcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -134,6 +155,7 @@
       </div>
     </div>
 
+    <!-- a sitemap in the website footer -->
     <footer>
       <a href="#"
       ><img
